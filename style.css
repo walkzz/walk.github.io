@@ -85,11 +85,11 @@ body.dark_theme #champion_name {
 
 #modal {
     display: none;
-    background: #fff;   
+    background: #fff;
     width: 200px;
     height: 200px;
     padding: 20px;
-    border-radius: 5px;     
+    border-radius: 5px;
     z-index: 2;
     position: fixed;
     top: 50%;
