@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(31, 33, 32);
+    max-width: 100%;
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    min-height: 100px;
+    min-width: 100%;
+    background-color: rgb(12, 168, 168);
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
+    justify-content: center;
+}
+
+.flashcard {
+    cursor: pointer;
+    margin: 40px;
+    width: 100px;
+    height: 105px;
+    border-radius: 50%;
+    border-color: black;
+    border-style: solid;
+    transition: 0.3s;
+}
+
+.flashcard>img {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100px;
+    border-radius: 50%;
+}
+
+body.dark_theme {
+    background-color: #fff;
+}
+
+body.dark_theme #champion_name {
+    color: #000;
+}
+
+#champion_name {
+    margin: 5px 5px;
+    font-family: "Beafort for LOL", "Arial", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 14px;
+    color: white;
+}
+
+.flashcard:hover {
+    transform: scale(1.1);
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Dark overlay color */
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#modal {
+    display: none;
+    background: #fff;   
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 5px;     
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#closeButton {
+    position: absolute;
+    top: -10px; /* Move the button 10px above the modal */
+    right: -10px; /* Move the button 10px to the right of the modal */
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    background-color: #fff; /* Background color for better visibility */
+    padding: 5px; /* Add some padding for better aesthetics */
+    border-radius: 50%; /* Make the button circular */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+    z-index: 3; /* Place the button above other elements */
+}
+#modalImage > img{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100px;
+    border-radius: 50%;
+}
