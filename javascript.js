@@ -12,7 +12,8 @@ flashcards.forEach(flashcard => {
     flashcard.addEventListener('click', () =>{
         overlay.style.display = "flex";
         modal.style.display = "block";
-        modalContent.innerHTML = '';
+        modalCover.textContent = "";
+
 
         const contentValue = flashcard.getAttribute('data-content');
         modalImage.textContent = contentValue;
@@ -23,7 +24,7 @@ flashcards.forEach(flashcard => {
         const newImage = document.createElement('img');
         newImage.src = imagePath;
         newImage.alt = contentValue;
-        modalContent.appendChild(newImage);
+        modalCover.appendChild(newImage);
     })
 })
 closeButton.addEventListener('click', () => {
