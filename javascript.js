@@ -51,7 +51,7 @@ function dark_theme(){
 function search_champions(){
     var input, filter, container, cards, title, i;
     input = document.getElementById("searchbar");
-    filter = input.value.toUpperCase();
+    filter = input.value.replace(/\s/g, '').toUpperCase();
     container = document.getElementById("container");
     cards = container.getElementsByClassName("flashcard");
 
