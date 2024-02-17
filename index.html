@@ -5,174 +5,676 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="A League of Legends website
-    that shows all the champions and their stats and skins">
+    that shows all the champions, the abilities and the lore of the champions.">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <title>League of Legends Champions</title>
 </head>
 
 <body id="body">
     <nav>
-        <button onclick="dark_theme()">Light</button>
         <input type="text" id="searchbar" onkeyup="search_champions()" maxlength="20" placeholder="Search Champions..">
     </nav>
     <div id="container">
         <div class="flashcard" data-content="Aatrox">
-            <img src="/Champion Icons/Aatrox/Aatrox_0.jpg" alt="Aatrox">
-            <h3 id="champion_name">Aatrox</h3>
+            <img src="/Champion Icons/Aatrox_0.webp" alt="Aatrox">
+            <h3 class="champion_name">Aatrox</h3>
+        </div>
+        <div class="flashcard" data-content="Ahri">
+            <img src="/Champion Icons/Ahri_0.webp" alt="Ahri">
+            <h3 class="champion_name">Ahri</h3>
+        </div>
+        <div class="flashcard" data-content="Akali">
+            <img src="/Champion Icons/Akali_0.webp" alt="Akali">
+            <h3 class="champion_name">Akali</h3>
+        </div>
+        <div class="flashcard" data-content="Akshan">
+            <img src="/Champion Icons/Akshan_0.webp" alt="Akshan">
+            <h3 class="champion_name">Akshan</h3>
+        </div>
+        <div class="flashcard" data-content="Alistar">
+            <img src="/Champion Icons/Alistar_0.webp" alt="Alistar">
+            <h3 class="champion_name">Alistar</h3>
+        </div>
+        <div class="flashcard" data-content="Amumu">
+            <img src="/Champion Icons/Amumu_0.webp" alt="Amumu">
+            <h3 class="champion_name">Amumu</h3>
+        </div>
+        <div class="flashcard" data-content="Annie">
+            <img src="/Champion Icons/" alt="Annie">
+            <h3 class="champion_name">Annie</h3>
+        </div>
+        <div class="flashcard" data-content="Aphelios">
+            <img src="/Champion Icons/" alt="Aphelios">
+            <h3 class="champion_name">Aphelios</h3>
+        </div>
+        <div class="flashcard" data-content="Ashe">
+            <img src="/Champion Icons/" alt="Ashe">
+            <h3 class="champion_name">Ashe</h3>
+        </div>
+        <div class="flashcard" data-content="Aurelion Sol">
+            <img src="/Champion Icons/" alt="Aurelion Sol">
+            <h3 class="champion_name">Aurelion Sol</h3>
+        </div>
+        <div class="flashcard" data-content="Azir">
+            <img src="/Champion Icons/" alt="Azir">
+            <h3 class="champion_name">Azir</h3>
+        </div>
+        <div class="flashcard" data-content="Bard">
+            <img src="/Champion Icons/" alt="Bard">
+            <h3 class="champion_name">Bard</h3>
+        </div>
+        <div class="flashcard" data-content="Bel'Veth">
+            <img src="/Champion Icons/" alt="Bel'Veth">
+            <h3 class="champion_name">Bel'Veth</h3>
+        </div>
+        <div class="flashcard" data-content="Blitzkrank">
+            <img src="/Champion Icons/" alt="Blitzkrank">
+            <h3 class="champion_name">Blitzkrank</h3>
+        </div>
+        <div class="flashcard" data-content="Brand">
+            <img src="/Champion Icons/" alt="Brand">
+            <h3 class="champion_name">Brand</h3>
+        </div>
+        <div class="flashcard" data-content="Briar">
+            <img src="/Champion Icons/" alt="Briar">
+            <h3 class="champion_name">Briar</h3>
+        </div>
+        <div class="flashcard" data-content="Caitlyn">
+            <img src="/Champion Icons/" alt="Caitlyn">
+            <h3 class="champion_name">Caitlyn</h3>
+        </div>
+        <div class="flashcard" data-content="Camille">
+            <img src="/Champion Icons/" alt="Camille">
+            <h3 class="champion_name">Camille</h3>
+        </div>
+        <div class="flashcard" data-content="Cassiopeia">
+            <img src="/Champion Icons/" alt="Cassiopeia">
+            <h3 class="champion_name">Cassiopeia</h3>
+        </div>
+        <div class="flashcard" data-content="Cho'Gath">
+            <img src="/Champion Icons/" alt="Cho'Gath">
+            <h3 class="champion_name">Cho'Gath</h3>
+        </div>
+        <div class="flashcard" data-content="Corki">
+            <img src="/Champion Icons/" alt="Corki">
+            <h3 class="champion_name">Corki</h3>
+        </div>
+        <div class="flashcard" data-content="Darius">
+            <img src="/Champion Icons/" alt="Darius">
+            <h3 class="champion_name">Darius</h3>
+        </div>
+        <div class="flashcard" data-content="Diana">
+            <img src="/Champion Icons/" alt="Diana">
+            <h3 class="champion_name">Diana</h3>
+        </div>
+        <div class="flashcard" data-content="Dr. Mundo">
+            <img src="/Champion Icons/" alt="Dr. Mundo">
+            <h3 class="champion_name">Dr. Mundo</h3>
+        </div>
+        <div class="flashcard" data-content="Draven">
+            <img src="/Champion Icons/" alt="Draven">
+            <h3 class="champion_name">Draven</h3>
+        </div>
+        <div class="flashcard" data-content="Ekko">
+            <img src="/Champion Icons/" alt="Ekko">
+            <h3 class="champion_name">Ekko</h3>
+        </div>
+        <div class="flashcard" data-content="Elise">
+            <img src="/Champion Icons/" alt="Elise">
+            <h3 class="champion_name">Elise</h3>
+        </div>
+        <div class="flashcard" data-content="Evelynn">
+            <img src="/Champion Icons/" alt="Evelynn">
+            <h3 class="champion_name">Evelynn</h3>
+        </div>
+        <div class="flashcard" data-content="Ezreal">
+            <img src="/Champion Icons/" alt="Ezreal">
+            <h3 class="champion_name">Ezreal</h3>
+        </div>
+        <div class="flashcard" data-content="Fiddlesticks">
+            <img src="/Champion Icons/" alt="Fiddlesticks">
+            <h3 class="champion_name">Fiddlesticks</h3>
+        </div>
+        <div class="flashcard" data-content="Fiora">
+            <img src="/Champion Icons/" alt="Fiora">
+            <h3 class="champion_name">Fiora</h3>
+        </div>
+        <div class="flashcard" data-content="Fizz">
+            <img src="/Champion Icons/" alt="Fizz">
+            <h3 class="champion_name">Fizz</h3>
+        </div>
+        <div class="flashcard" data-content="Galio">
+            <img src="/Champion Icons/" alt="Galio">
+            <h3 class="champion_name">Galio</h3>
+        </div>
+        <div class="flashcard" data-content="Gankplank">
+            <img src="/Champion Icons/" alt="Gankplank">
+            <h3 class="champion_name">Gankplank</h3>
+        </div>
+        <div class="flashcard" data-content="Garen">
+            <img src="/Champion Icons/" alt="Garen">
+            <h3 class="champion_name">Garen</h3>
+        </div>
+        <div class="flashcard" data-content="Gnar">
+            <img src="/Champion Icons/" alt="Gnar">
+            <h3 class="champion_name">Gnar</h3>
+        </div>
+        <div class="flashcard" data-content="Gragas">
+            <img src="/Champion Icons/" alt="Gragas">
+            <h3 class="champion_name">Gragas</h3>
+        </div>
+        <div class="flashcard" data-content="Graves">
+            <img src="/Champion Icons/" alt="Graves">
+            <h3 class="champion_name">Graves</h3>
+        </div>
+        <div class="flashcard" data-content="Gwen">
+            <img src="/Champion Icons/" alt="Gwen">
+            <h3 class="champion_name">Gwen</h3>
+        </div>
+        <div class="flashcard" data-content="Hecarim">
+            <img src="/Champion Icons/" alt="Hecarim">
+            <h3 class="champion_name">Hecarim</h3>
+        </div>
+        <div class="flashcard" data-content="Heimerdinger">
+            <img src="/Champion Icons/" alt="Heimerdinger">
+            <h3 class="champion_name">Heimerdinger</h3>
+        </div>
+        <div class="flashcard" data-content="Hwei">
+            <img src="/Champion Icons/" alt="Hwei">
+            <h3 class="champion_name">Hwei</h3>
+        </div>
+        <div class="flashcard" data-content="Illaoi">
+            <img src="/Champion Icons/" alt="Illaoi">
+            <h3 class="champion_name">Illaoi</h3>
+        </div>
+        <div class="flashcard" data-content="Irelia">
+            <img src="/Champion Icons/" alt="Irelia">
+            <h3 class="champion_name">Irelia</h3>
+        </div>
+        <div class="flashcard" data-content="Ivern">
+            <img src="/Champion Icons/" alt="Ivern">
+            <h3 class="champion_name">Ivern</h3>
+        </div>
+        <div class="flashcard" data-content="Janna">
+            <img src="/Champion Icons/" alt="Janna">
+            <h3 class="champion_name">Janna</h3>
+        </div>
+        <div class="flashcard" data-content="Jarvan IV">
+            <img src="/Champion Icons/" alt="Jarvan IV">
+            <h3 class="champion_name">Jarvan IV</h3>
+        </div>
+        <div class="flashcard" data-content="Jax">
+            <img src="/Champion Icons/" alt="Jax">
+            <h3 class="champion_name">Jax</h3>
+        </div>
+        <div class="flashcard" data-content="Jayce">
+            <img src="/Champion Icons/" alt="Jayce">
+            <h3 class="champion_name">Jayce</h3>
+        </div>
+        <div class="flashcard" data-content="Jhin">
+            <img src="/Champion Icons/" alt="Jhin">
+            <h3 class="champion_name">Jhin</h3>
+        </div>
+        <div class="flashcard" data-content="Jinx">
+            <img src="/Champion Icons/" alt="Jinx">
+            <h3 class="champion_name">Jinx</h3>
+        </div>
+        <div class="flashcard" data-content="K'Sante">
+            <img src="/Champion Icons/" alt="K'Sante">
+            <h3 class="champion_name">K'Sante</h3>
+        </div>
+        <div class="flashcard" data-content="Kai'Sa">
+            <img src="/Champion Icons/" alt="Kai'Sa">
+            <h3 class="champion_name">Kai'Sa</h3>
+        </div>
+        <div class="flashcard" data-content="Karma">
+            <img src="/Champion Icons/" alt="Karma">
+            <h3 class="champion_name">Karma</h3>
+        </div>
+        <div class="flashcard" data-content="Karthus">
+            <img src="/Champion Icons/" alt="Karthus">
+            <h3 class="champion_name">Karthus</h3>
+        </div>
+        <div class="flashcard" data-content="Kassadin">
+            <img src="/Champion Icons/" alt="Kassadin">
+            <h3 class="champion_name">Kassadin</h3>
+        </div>
+        <div class="flashcard" data-content="Katarina">
+            <img src="/Champion Icons/" alt="Katarina">
+            <h3 class="champion_name">Katarina</h3>
+        </div>
+        <div class="flashcard" data-content="Kayle">
+            <img src="/Champion Icons/" alt="Kayle">
+            <h3 class="champion_name">Kayle</h3>
+        </div>
+        <div class="flashcard" data-content="Kayn">
+            <img src="/Champion Icons/" alt="Kayn">
+            <h3 class="champion_name">Kayn</h3>
+        </div>
+        <div class="flashcard" data-content="Kennen">
+            <img src="/Champion Icons/" alt="Kennen">
+            <h3 class="champion_name">Kennen</h3>
+        </div>
+        <div class="flashcard" data-content="Kha'Zix">
+            <img src="/Champion Icons/" alt="Kha'Zix">
+            <h3 class="champion_name">Kha'Zix</h3>
+        </div>
+        <div class="flashcard" data-content="Kindred">
+            <img src="/Champion Icons/" alt="Kindred">
+            <h3 class="champion_name">Kindred</h3>
+        </div>
+        <div class="flashcard" data-content="Kled">
+            <img src="/Champion Icons/" alt="Kled">
+            <h3 class="champion_name">Kled</h3>
+        </div>
+        <div class="flashcard" data-content="Kog'Maw">
+            <img src="/Champion Icons/" alt="Kog'Maw">
+            <h3 class="champion_name">Kog'Maw</h3>
+        </div>
+        <div class="flashcard" data-content="LeBlanc">
+            <img src="/Champion Icons/" alt="LeBlanc">
+            <h3 class="champion_name">LeBlanc</h3>
+        </div>
+        <div class="flashcard" data-content="Lee Sin">
+            <img src="/Champion Icons/" alt="Lee Sin">
+            <h3 class="champion_name">Lee Sin</h3>
+        </div>
+        <div class="flashcard" data-content="Leona">
+            <img src="/Champion Icons/" alt="Leona">
+            <h3 class="champion_name">Leona</h3>
+        </div>
+        <div class="flashcard" data-content="Lillia">
+            <img src="/Champion Icons/" alt="Lillia">
+            <h3 class="champion_name">Lillia</h3>
+        </div>
+        <div class="flashcard" data-content="Lissandra">
+            <img src="/Champion Icons/" alt="Lissandra">
+            <h3 class="champion_name">Lissandra</h3>
+        </div>
+        <div class="flashcard" data-content="Lucian">
+            <img src="/Champion Icons/" alt="Lucian">
+            <h3 class="champion_name">Lucian</h3>
+        </div>
+        <div class="flashcard" data-content="Lulu">
+            <img src="/Champion Icons/" alt="Lulu">
+            <h3 class="champion_name">Lulu</h3>
+        </div>
+        <div class="flashcard" data-content="Lux">
+            <img src="/Champion Icons/" alt="Lux">
+            <h3 class="champion_name">Lux</h3>
+        </div>
+        <div class="flashcard" data-content="Malphite">
+            <img src="/Champion Icons/" alt="Malphite">
+            <h3 class="champion_name">Malphite</h3>
+        </div>
+        <div class="flashcard" data-content="Malzahar">
+            <img src="/Champion Icons/" alt="Malzahar">
+            <h3 class="champion_name">Malzahar</h3>
+        </div>
+        <div class="flashcard" data-content="Maokai">
+            <img src="/Champion Icons/" alt="Maokai">
+            <h3 class="champion_name">Maokai</h3>
+        </div>
+        <div class="flashcard" data-content="Master Yi">
+            <img src="/Champion Icons/" alt="Master Yi">
+            <h3 class="champion_name">Master Yi</h3>
+        </div>
+        <div class="flashcard" data-content="Milio">
+            <img src="/Champion Icons/" alt="Milio">
+            <h3 class="champion_name">Milio</h3>
+        </div>
+        <div class="flashcard" data-content="Miss Fortune">
+            <img src="/Champion Icons/" alt="Miss Fortune">
+            <h3 class="champion_name">Miss Fortune</h3>
+        </div>
+        <div class="flashcard" data-content="Mordekaiser">
+            <img src="/Champion Icons/" alt="Mordekaiser">
+            <h3 class="champion_name">Mordekaiser</h3>
+        </div>
+        <div class="flashcard" data-content="Morgana">
+            <img src="/Champion Icons/" alt="Morgana">
+            <h3 class="champion_name">Morgana</h3>
+        </div>
+        <div class="flashcard" data-content="Naafiri">
+            <img src="/Champion Icons/" alt="Naafiri">
+            <h3 class="champion_name">Naafiri</h3>
+        </div>
+        <div class="flashcard" data-content="Nami">
+            <img src="/Champion Icons/" alt="Nami">
+            <h3 class="champion_name">Nami</h3>
+        </div>
+        <div class="flashcard" data-content="Nasus">
+            <img src="/Champion Icons/" alt="Nasus">
+            <h3 class="champion_name">Nasus</h3>
+        </div>
+        <div class="flashcard" data-content="Nautilus">
+            <img src="/Champion Icons/" alt="Nautilus">
+            <h3 class="champion_name">Nautilus</h3>
+        </div>
+        <div class="flashcard" data-content="Neeko">
+            <img src="/Champion Icons/" alt="Neeko">
+            <h3 class="champion_name">Neeko</h3>
+        </div>
+        <div class="flashcard" data-content="Nidalee">
+            <img src="/Champion Icons/" alt="Nidalee">
+            <h3 class="champion_name">Nidalee</h3>
+        </div>
+        <div class="flashcard" data-content="Nilah">
+            <img src="/Champion Icons/" alt="Nilah">
+            <h3 class="champion_name">Nilah</h3>
+        </div>
+        <div class="flashcard" data-content="Nocturne">
+            <img src="/Champion Icons/" alt="Nocturne">
+            <h3 class="champion_name">Nocturne</h3>
+        </div>
+        <div class="flashcard" data-content="Nunu & Willump">
+            <img src="/Champion Icons/" alt="Nunu & Willump">
+            <h3 class="champion_name">Nunu & Willump</h3>
+        </div>
+        <div class="flashcard" data-content="Olaf">
+            <img src="/Champion Icons/" alt="Olaf">
+            <h3 class="champion_name">Olaf</h3>
+        </div>
+        <div class="flashcard" data-content="Orianna">
+            <img src="/Champion Icons/" alt="Orianna">
+            <h3 class="champion_name">Orianna</h3>
+        </div>
+        <div class="flashcard" data-content="Ornn">
+            <img src="/Champion Icons/" alt="Ornn">
+            <h3 class="champion_name">Ornn</h3>
+        </div>
+        <div class="flashcard" data-content="Pantheon">
+            <img src="/Champion Icons/" alt="Pantheon">
+            <h3 class="champion_name">Pantheon</h3>
+        </div>
+        <div class="flashcard" data-content="Poppy">
+            <img src="/Champion Icons/" alt="Poppy">
+            <h3 class="champion_name">Poppy</h3>
+        </div>
+        <div class="flashcard" data-content="Pyke">
+            <img src="/Champion Icons/" alt="Pyke">
+            <h3 class="champion_name">Pyke</h3>
+        </div>
+        <div class="flashcard" data-content="Qiyana">
+            <img src="/Champion Icons/" alt="Qiyana">
+            <h3 class="champion_name">Qiyana</h3>
+        </div>
+        <div class="flashcard" data-content="Quinn">
+            <img src="/Champion Icons/" alt="Quinn">
+            <h3 class="champion_name">Quinn</h3>
+        </div>
+        <div class="flashcard" data-content="Rakan">
+            <img src="/Champion Icons/" alt="Rakan">
+            <h3 class="champion_name">Rakan</h3>
+        </div>
+        <div class="flashcard" data-content="Rammus"> <!--OK OK OK-->
+            <img src="/Champion Icons/" alt="Rammus">
+            <h3 class="champion_name">Rammus</h3>
+        </div>
+        <div class="flashcard" data-content="Rek'Sai">
+            <img src="/Champion Icons/" alt="Rek'Sai">
+            <h3 class="champion_name">Rek'Sai</h3>
+        </div>
+        <div class="flashcard" data-content="Rell">
+            <img src="/Champion Icons/" alt="Rell">
+            <h3 class="champion_name">Rell</h3>
+        </div>
+        <div class="flashcard" data-content="Renata Glasc">
+            <img src="/Champion Icons/" alt="Renata Glasc">
+            <h3 class="champion_name">Renata Glasc</h3>
+        </div>
+        <div class="flashcard" data-content="Renekton">
+            <img src="/Champion Icons/" alt="Renekton">
+            <h3 class="champion_name">Renekton</h3>
+        </div>
+        <div class="flashcard" data-content="Rengar">
+            <img src="/Champion Icons/" alt="Rengar">
+            <h3 class="champion_name">Rengar</h3>
+        </div>
+        <div class="flashcard" data-content="Riven">
+            <img src="/Champion Icons/" alt="Riven">
+            <h3 class="champion_name">Riven</h3>
+        </div>
+        <div class="flashcard" data-content="Rumble">
+            <img src="/Champion Icons/" alt="Rumble">
+            <h3 class="champion_name">Rumble</h3>
+        </div>
+        <div class="flashcard" data-content="Ryze">
+            <img src="/Champion Icons/" alt="Ryze">
+            <h3 class="champion_name">Ryze</h3>
+        </div>
+        <div class="flashcard" data-content="Samira">
+            <img src="/Champion Icons/" alt="Samira">
+            <h3 class="champion_name">Samira</h3>
+        </div>
+        <div class="flashcard" data-content="Sejuani">
+            <img src="/Champion Icons/" alt="Sejuani">
+            <h3 class="champion_name">Sejuani</h3>
+        </div>
+        <div class="flashcard" data-content="Senna">
+            <img src="/Champion Icons/" alt="Senna">
+            <h3 class="champion_name">Senna</h3>
+        </div>
+        <div class="flashcard" data-content="Seraphine">
+            <img src="/Champion Icons/" alt="Seraphine">
+            <h3 class="champion_name">Seraphine</h3>
+        </div>
+        <div class="flashcard" data-content="Sett">
+            <img src="/Champion Icons/" alt="Sett">
+            <h3 class="champion_name">Sett</h3>
+        </div>
+        <div class="flashcard" data-content="Shaco">
+            <img src="/Champion Icons/" alt="Shaco">
+            <h3 class="champion_name">Shaco</h3>
+        </div>
+        <div class="flashcard" data-content="Shen">
+            <img src="/Champion Icons/" alt="Shen">
+            <h3 class="champion_name">Shen</h3>
+        </div>
+        <div class="flashcard" data-content="Shyvana">
+            <img src="/Champion Icons/" alt="Shyvana">
+            <h3 class="champion_name">Shyvana</h3>
+        </div>
+        <div class="flashcard" data-content="Singed">
+            <img src="/Champion Icons/" alt="Sion">
+            <h3 class="champion_name">Singed</h3>
+        </div>
+        <div class="flashcard" data-content="Sivir">
+            <img src="/Champion Icons/" alt="Sivir">
+            <h3 class="champion_name">Sivir</h3>
+        </div>
+        <div class="flashcard" data-content="Skarner">
+            <img src="/Champion Icons/" alt="Skarner">
+            <h3 class="champion_name">Skarner</h3>
+        </div>
+        <div class="flashcard" data-content="Smolder">
+            <img src="/Champion Icons/" alt="Smolder">
+            <h3 class="champion_name">Smolder</h3>
+        </div>
+        <div class="flashcard" data-content="Sona">
+            <img src="/Champion Icons/" alt="Sona">
+            <h3 class="champion_name">Sona</h3>
+        </div>
+        <div class="flashcard" data-content="Soraka">
+            <img src="/Champion Icons/" alt="Soraka">
+            <h3 class="champion_name">Soraka</h3>
+        </div>
+        <div class="flashcard" data-content="Swain">
+            <img src="/Champion Icons/" alt="Swain">
+            <h3 class="champion_name">Swain</h3>
+        </div>
+        <div class="flashcard" data-content="Sylas">
+            <img src="/Champion Icons/" alt="Sylas">
+            <h3 class="champion_name">Sylas</h3>
+        </div>
+        <div class="flashcard" data-content="Syndra">
+            <img src="/Champion Icons/" alt="Syndra">
+            <h3 class="champion_name">Syndra</h3>
+        </div>
+        <div class="flashcard" data-content="Tahm Kench">
+            <img src="/Champion Icons/" alt="Tahm Kench">
+            <h3 class="champion_name">Tahm Kench</h3>
+        </div>
+        <div class="flashcard" data-content="Taliyah">
+            <img src="/Champion Icons/" alt="Taliyah">
+            <h3 class="champion_name">Taliyah</h3>
+        </div>
+        <div class="flashcard" data-content="Talon">
+            <img src="/Champion Icons/" alt="Talon">
+            <h3 class="champion_name">Talon</h3>
+        </div>
+        <div class="flashcard" data-content="Taric">
+            <img src="/Champion Icons/" alt="Taric">
+            <h3 class="champion_name">Taric</h3>
+        </div>
+        <div class="flashcard" data-content="Teemo">
+            <img src="/Champion Icons/" alt="Thresh">
+            <h3 class="champion_name">Teemo</h3>
+        </div>
+        <div class="flashcard" data-content="Tristana">
+            <img src="/Champion Icons/" alt="Trundle">
+            <h3 class="champion_name">Tristana</h3>
+        </div>
+        <div class="flashcard" data-content="Tryndamere">
+            <img src="/Champion Icons/" alt="Tryndamere">
+            <h3 class="champion_name">Tryndamere</h3>
+        </div>
+        <div class="flashcard" data-content="Twisted Fate">
+            <img src="/Champion Icons/" alt="Twisted Fate">
+            <h3 class="champion_name">Twisted Fate</h3>
+        </div>
+        <div class="flashcard" data-content="Twitch">
+            <img src="/Champion Icons/" alt="Twitch">
+            <h3 class="champion_name">Twitch</h3>
+        </div>
+        <div class="flashcard" data-content="Udyr">
+            <img src="/Champion Icons/" alt="Udyr">
+            <h3 class="champion_name">Udyr</h3>
+        </div>
+        <div class="flashcard" data-content="Urgot">
+            <img src="/Champion Icons/" alt="Urgot">
+            <h3 class="champion_name">Urgot</h3>
+        </div>
+        <div class="flashcard" data-content="Varus">
+            <img src="/Champion Icons/" alt="Varus">
+            <h3 class="champion_name">Varus</h3>
+        </div>
+        <div class="flashcard" data-content="Vayne">
+            <img src="/Champion Icons/" alt="Vayne">
+            <h3 class="champion_name">Vayne</h3>
+        </div>
+        <div class="flashcard" data-content="Veigar">
+            <img src="/Champion Icons/" alt="Veigar">
+            <h3 class="champion_name">Veigar</h3>
+        </div>
+        <div class="flashcard" data-content="Vel'Koz">
+            <img src="/Champion Icons/" alt="Vel'Koz">
+            <h3 class="champion_name">Vel'Koz</h3>
+        </div>
+        <div class="flashcard" data-content="Vex">
+            <img src="/Champion Icons/" alt="Vex">
+            <h3 class="champion_name">Vex</h3>
+        </div>
+        <div class="flashcard" data-content="Vi">
+            <img src="/Champion Icons/" alt="Vi">
+            <h3 class="champion_name">Vi</h3>
         </div>
         <div class="flashcard" data-content="Viego">
-            <img src="/Champion Icons/Viego_0.jpg" alt="Ahri">
-            <h3 id="champion_name">Viego</h3>
-        </div>
-        <div class="flashcard">
-            <h3 id="champion_name"></h3>
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-        <div class="flashcard">
-        </div>
-    </div>
-
+            <img src="/Champion Icons/" alt="Viego">
+            <h3 class="champion_name">Viego</h3>
+        </div>
+        <div class="flashcard" data-content="Viktor">
+            <img src="/Champion Icons/" alt="Viktor">
+            <h3 class="champion_name">Viktor</h3>
+        </div>
+        <div class="flashcard" data-content="Vladimir">
+            <img src="/Champion Icons/" alt="Vladimir">
+            <h3 class="champion_name">Vladimir</h3>
+        </div>
+        <div class="flashcard" data-content="Volibear">
+            <img src="/Champion Icons/" alt="Volibear">
+            <h3 class="champion_name">Volibear</h3>
+        </div>
+        <div class="flashcard" data-content="Warwick">
+            <img src="/Champion Icons/" alt="Warwick">
+            <h3 class="champion_name">Warwick</h3>
+        </div>
+        <div class="flashcard" data-content="Wukong">
+            <img src="/Champion Icons/" alt="Wukong">
+            <h3 class="champion_name">Wukong</h3>
+        </div>
+        <div class="flashcard" data-content="Xayah">
+            <img src="/Champion Icons/" alt="Xayah">
+            <h3 class="champion_name">Xayah</h3>
+        </div>
+        <div class="flashcard" data-content="Xerath">
+            <img src="/Champion Icons/" alt="Xerath">
+            <h3 class="champion_name">Xerath</h3>
+        </div>
+        <div class="flashcard" data-content="Xin Zhao">
+            <img src="/Champion Icons/" alt="Xin Zhao">
+            <h3 class="champion_name">Xin Zhao</h3>
+        </div>
+        <div class="flashcard" data-content="Yasuo">
+            <img src="/Champion Icons/" alt="Yasuo">
+            <h3 class="champion_name">Yasuo</h3>
+        </div>
+        <div class="flashcard" data-content="Yone">
+            <img src="/Champion Icons/" alt="Yone">
+            <h3 class="champion_name">Yone</h3>
+        </div>
+        <div class="flashcard" data-content="Yorick">
+            <img src="/Champion Icons/" alt="Yorick">
+            <h3 class="champion_name">Yorick</h3>
+        </div>
+        <div class="flashcard" data-content="Yuumi">
+            <img src="/Champion Icons/" alt="Yuumi">
+            <h3 class="champion_name">Yuumi</h3>
+        </div>
+        <div class="flashcard" data-content="Zac">
+            <img src="/Champion Icons/" alt="Zac">
+            <h3 class="champion_name">Zac</h3>
+        </div>
+        <div class="flashcard" data-content="Zed">
+            <img src="/Champion Icons/" alt="Zed">
+            <h3 class="champion_name">Zed</h3>
+        </div>
+        <div class="flashcard" data-content="Zeri">
+            <img src="/Champion Icons/" alt="Zeri">
+            <h3 class="champion_name">Zeri</h3>
+        </div>
+        <div class="flashcard" data-content="Ziggs">
+            <img src="/Champion Icons/" alt="Ziggs">
+            <h3 class="champion_name">Ziggs</h3>
+        </div>
+        <div class="flashcard" data-content="Zilean">
+            <img src="/Champion Icons/" alt="Zilean">
+            <h3 class="champion_name">Zilean</h3>
+        </div>
+        <div class="flashcard" data-content="Zoe">
+            <img src="/Champion Icons/" alt="Zoe">
+            <h3 class="champion_name">Zoe</h3>
+        </div>
+        <div class="flashcard" data-content="Zyra">
+            <img src="/Champion Icons/" alt="Zyra">
+            <h3 class="champion_name">Zyra</h3>
+        </div>
+    </div> <!-- End of container div-->
+    <footer id="footer-content">
+        <div id="footer-links">
+            <ul>
+                <li><a href="https://euw.leagueoflegends.com/en/game-info/get-started/what-is-lol/" target="_href">About
+                        League of Legends</a></li>
+                <li><a href="http://leagueoflegends.eu-surveyen2.sgizmo.com/s3/" target="_blank">Help us Improve</a>
+                </li>
+                <li><a href="https://status.riotgames.com/?locale=en_US" target="_blank">Server Status</a></li>
+                <li><a href="https://support.riotgames.com/hc/en-us" target="_blank">Support</a></li>
+            </ul>
+        </div>
+    </footer>
     <div id="overlay"></div>
     <div id="modal">
         <span id="closeButton">&times;</span>
@@ -180,7 +682,8 @@
             <img id="modalImage" src="" alt="Champion Image">
         </div>
         <div id="modalContent">
-            
+            <p class="championQuote"></p>
+            <p id="loreContent"></p>
         </div>
     </div>
     <script type="text/javascript" src="javascript.js"></script>
